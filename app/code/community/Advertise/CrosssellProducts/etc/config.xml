@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- Define module and version number-->
+    <modules>
+        <Advertise_CrosssellProducts>
+            <version>1.0.1</version>
+        </Advertise_CrosssellProducts>
+    </modules>
+
+    <!-- Default values for Module Configuration -->
+    <default>
+        <advertise_suggestedproducts_options>
+            <advertise_suggested_products>
+                <advertise_crosssell_prod_count>3</advertise_crosssell_prod_count>
+            </advertise_suggested_products>
+        </advertise_suggestedproducts_options>
+    </default>
+
+    <admin>
+        <routers>
+            <crosssellproducts>
+                <use>admin</use>
+                <args>
+                    <module>Advertise_CrosssellProducts</module>
+                    <frontName>advertise_crosssell</frontName>
+                </args>
+            </crosssellproducts>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <!-- Add Advertise settings section to ACL -->
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <!-- Specific to this Adverti.se module (others in Community package are added there) -->
+                                        <advertise_suggestedproducts_options>
+                                            <title>Adverti.se Suggested Products Module Section</title>
+                                            <sort_order>6</sort_order>
+                                        </advertise_suggestedproducts_options>
+
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+    <global>
+        <!-- Define setup resources to run on install e.g. run SQL and data scripts -->
+        <resources>
+            <crosssellproducts_setup>
+                <setup>
+                    <module>Advertise_CrosssellProducts</module>
+                    <class>Advertise_CrosssellProducts_Model_Resource_Setup</class>
+                </setup>
+            </crosssellproducts_setup>
+        </resources>
+
+        <!-- Redirect calls to core Mage_Catalog_Block_Product_List_Crosssell with Advertise crosssell product list -->
+        <blocks>
+            <catalog>
+                <rewrite>
+                    <product_list_crosssell>Advertise_CrosssellProducts_Block_Crosssell</product_list_crosssell>
+                </rewrite>
+            </catalog>
+        </blocks>
+
+        <!-- Set Helper class -->
+        <helpers>
+            <advertise_crosssellproducts>
+                <class>Advertise_CrosssellProducts_Helper</class>
+            </advertise_crosssellproducts>
+        </helpers>
+
+        <!-- Set necessary Models -->
+        <models>
+            <crosssellproducts>
+                <class>Advertise_CrosssellProducts_Model</class>
+            </crosssellproducts>
+        </models>
+    </global>
+
+    <frontend>
+        <routers>
+            <!-- the <crosssellproducts> tagname appears to be arbitrary, but by
+            convention is should match the frontName tag below-->
+            <crosssellproducts>
+                <use>standard</use>
+                <args>
+                    <module>Advertise_CrosssellProducts</module>
+                    <frontName>crosssellproducts</frontName>
+                </args>
+            </crosssellproducts>
+        </routers>
+
+        <!-- Add to default page layout -->
+        <layout>
+             <updates>
+                  <crosssellproducts>
+                        <file>advertisecrosssellproducts.xml</file>
+                  </crosssellproducts>
+             </updates>
+        </layout>
+
+    </frontend>
+
+</config>
+

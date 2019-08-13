@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+<!-- 
+   The top-level "Adverti.se" tab is defined in our Advertise_Account module, 
+   a pre-requisite for all other Adverti.se modules                           
+ -->
+
+<!-- Sections under Adverti.se tab -->
+    <sections>
+        <!-- Adds config settings input boxes in the Advertise config section -->
+        <!-- Access these settings using, e.g.:
+             Mage::getStoreConfig('advertise_suggestedproducts_options/advertise_suggested_products/advertise_crosssell_prod_count');
+             ANY CHANGES TO THESE KEYS NEEDS TO BE REFLECTED IN Config.php -->
+        <advertise_suggestedproducts_options translate="label">
+            <tab>Advertise</tab>
+            <label>Suggested Products</label>
+            <frontend_type>text</frontend_type>
+            <sort_order>430</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <advertise_suggested_products translate="label">
+                    <label>Adverti.se Suggested Products Options</label>
+                    <frontend_type>text</frontend_type>
+                    <!--sort_order>1</sort_order-->
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <advertise_crosssell_prod_count translate="label">
+                            <label>Number of Cross-Sell products to show</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </advertise_crosssell_prod_count>
+                    </fields>
+                </advertise_suggested_products>
+            </groups>
+        </advertise_suggestedproducts_options>
+    </sections>
+</config>

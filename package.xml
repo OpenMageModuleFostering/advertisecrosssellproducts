@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+    <name>AdvertiseCrossSellProducts</name>
+    <version>1.2.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Adverti.se Cross Sell Products for Magento - Dynamically Updated and Individually Personalised Cross Sell Products</summary>
+    <description>With Adverti.se Cross Sell Products you get automated Cross Sell product relations.</description>
+    <notes>v1.0.0 - This is the first release of cross sell products.&#xD;
+&#xD;
+v1.0.1 - improves performance when no remote results available&#xD;
+&#xD;
+v1.0.2 - minor bug fix&#xD;
+&#xD;
+v1.2.0 - Stable update; compatibility with Community version 1.3.0 and above</notes>
+    <authors><author><name>Michael</name><user>Oxley</user><email>mike@adverti.se</email></author></authors>
+    <date>2013-03-05</date>
+    <time>14:16:16</time>
+    <contents><target name="mage"><dir name="app"><dir name="etc"><dir name="modules"><file name="Advertise_CrosssellProducts.xml" hash="55a9714e5a33d070af0463631bda53d4"/></dir></dir><dir name="code"><dir name="community"><dir name="Advertise"><dir name="CrosssellProducts"><dir name="Block"><dir name="Adminhtml"><file name="CrosssellProducts.php" hash="d76690db82c2aa2e806fbed5cf36f189"/></dir><file name="Crosssell.php" hash="5948013a38c33cc19c7b2ceb3dc03b1d"/><file name="Index.php" hash="88e261197bb20a571e682ccac4eef29a"/></dir><dir name="Helper"><file name="Data.php" hash="b64cfb96846c17dcae21914df896fbb6"/></dir><dir name="Model"><file name="Config.php" hash="fa7e777a6a9fdea82fd66c8ecd67616b"/><dir name="Resource"><file name="Setup.php" hash="eb064a37942f79b14fb1f6c1995d7bf6"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="CrosssellProductsController.php" hash="db20b8ce3ce11767dc3b3670bdb89444"/></dir><file name="CrosssellProductsController.php" hash="5c51f3a11cb7d28e18cdec9310a270c9"/><file name="IndexController.php" hash="cd70bce6af053a1f917985a6365c7df5"/></dir><dir name="data"><dir name="crosssellproducts_setup"><file name="data-install-1.0.0.php" hash="96c20ce3d508e82d1ffa53a082f71f57"/><file name="data-upgrade-1.0.0-1.0.1.php" hash="71d02f14c713f98e4e7dd469c29f435e"/></dir></dir><dir name="etc"><file name="config.xml" hash="18fa2ff2521342ec9a61e9f24b7f9206"/><file name="system.xml" hash="0fb9defeb68c4b621990983ed10535e4"/></dir><dir name="sql"><dir name="crosssellproducts_setup"><file name="install-1.0.0.php" hash="9891119a03af800927b8104beceeee10"/></dir></dir></dir></dir></dir></dir><dir name="design"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="advertisecrosssellproducts.xml" hash="9ea40c62d1a12947d9128c19e24bd427"/></dir></dir></dir></dir></dir></dir><dir name="Adverti.se Module Docs"><file name="Advertise Crosssell Products.html" hash="9ac9ad2c982787e9019909e352df6aed"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php><package><name>AdvertiseCommunity</name><channel>community</channel><min>1.3.0</min><max>1.3.9</max></package></required></dependencies>
+</package>
